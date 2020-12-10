@@ -30,7 +30,7 @@ namespace pl_EmirSanchezRamirezEC2
         private void InitializeComponent()
         {
             this.txtNumeroEntero = new System.Windows.Forms.TextBox();
-            this.txtAgregar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lsbNumerosEnteros = new System.Windows.Forms.ListBox();
             this.btnPares = new System.Windows.Forms.Button();
@@ -46,15 +46,15 @@ namespace pl_EmirSanchezRamirezEC2
             this.txtNumeroEntero.TabIndex = 0;
             this.txtNumeroEntero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // txtAgregar
+            // btnAgregar
             // 
-            this.txtAgregar.Location = new System.Drawing.Point(284, 29);
-            this.txtAgregar.Name = "txtAgregar";
-            this.txtAgregar.Size = new System.Drawing.Size(75, 23);
-            this.txtAgregar.TabIndex = 1;
-            this.txtAgregar.Text = "Agregar";
-            this.txtAgregar.UseVisualStyleBackColor = true;
-            this.txtAgregar.Click += new System.EventHandler(this.txtAgregar_Click);
+            this.btnAgregar.Location = new System.Drawing.Point(284, 29);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.txtAgregar_Click);
             // 
             // label1
             // 
@@ -81,6 +81,7 @@ namespace pl_EmirSanchezRamirezEC2
             this.btnPares.TabIndex = 4;
             this.btnPares.Text = "PARES";
             this.btnPares.UseVisualStyleBackColor = true;
+            this.btnPares.Click += new System.EventHandler(this.btnPares_Click);
             // 
             // btnImpares
             // 
@@ -90,6 +91,7 @@ namespace pl_EmirSanchezRamirezEC2
             this.btnImpares.TabIndex = 5;
             this.btnImpares.Text = "IMPARES";
             this.btnImpares.UseVisualStyleBackColor = true;
+            this.btnImpares.Click += new System.EventHandler(this.btnImpares_Click);
             // 
             // label2
             // 
@@ -110,7 +112,7 @@ namespace pl_EmirSanchezRamirezEC2
             this.Controls.Add(this.btnPares);
             this.Controls.Add(this.lsbNumerosEnteros);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtAgregar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtNumeroEntero);
             this.Name = "SegundaParte";
             this.Text = "SegundaParte";
@@ -123,7 +125,7 @@ namespace pl_EmirSanchezRamirezEC2
         #endregion
 
         private System.Windows.Forms.TextBox txtNumeroEntero;
-        private System.Windows.Forms.Button txtAgregar;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lsbNumerosEnteros;
         private System.Windows.Forms.Button btnPares;
