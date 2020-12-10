@@ -70,7 +70,7 @@ namespace pl_EmirSanchezRamirezEC2
             this.lsbNumerosEnteros.FormattingEnabled = true;
             this.lsbNumerosEnteros.Location = new System.Drawing.Point(132, 81);
             this.lsbNumerosEnteros.Name = "lsbNumerosEnteros";
-            this.lsbNumerosEnteros.Size = new System.Drawing.Size(129, 134);
+            this.lsbNumerosEnteros.Size = new System.Drawing.Size(129, 147);
             this.lsbNumerosEnteros.TabIndex = 3;
             // 
             // btnPares
@@ -104,7 +104,7 @@ namespace pl_EmirSanchezRamirezEC2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 241);
+            this.ClientSize = new System.Drawing.Size(416, 244);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnImpares);
             this.Controls.Add(this.btnPares);
