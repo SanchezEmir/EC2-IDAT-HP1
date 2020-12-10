@@ -14,6 +14,7 @@ namespace pl_EmirSanchezRamirezEC2
     {
         private Modal objModal = null;
         private SegundaParte objDos = null;
+        private terceraParte objTres = null;
         public PuntodeVenta()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace pl_EmirSanchezRamirezEC2
             
             objModal = null;
             objDos = null;
+            objTres = null;
             
         }
 
@@ -98,6 +100,27 @@ namespace pl_EmirSanchezRamirezEC2
             {
                 objDos.Activate();
             }
+            tsslEstado.Text = "Esta en la Opcion: " + segundaParteToolStripMenuItem.Text;
+        }
+
+        private void terceraParteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (objTres == null)
+            {
+
+                objTres = new terceraParte();
+
+                objTres.MdiParent = this;
+
+                objTres.FormClosed += new FormClosedEventHandler(CerrarFormularioDeProductos);
+
+                objTres.Show();
+            }
+            else
+            {
+                objTres.Activate();
+            }
+            tsslEstado.Text = "Esta en la Opcion: " + terceraParteToolStripMenuItem.Text;
         }
     }
 }

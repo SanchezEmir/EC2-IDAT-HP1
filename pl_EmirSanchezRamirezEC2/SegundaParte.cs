@@ -82,7 +82,7 @@ namespace pl_EmirSanchezRamirezEC2
 
             for (int k = 0; k < contp; k++)
             {
-                MessageBox.Show("Lista de pares: "+lpares[k],"Pares",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Lista de pares: "+ lpares[k].ToString(), "Pares",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             
 
@@ -102,20 +102,20 @@ namespace pl_EmirSanchezRamirezEC2
                 }
             }
 
-            int[] lpares = new int[conti];
+            int[] limpares = new int[conti];
             conti = 0;
             for (int j = 0; j < 10; j++)
             {
                 if (lNumerosEnteros[j] % 2 != 0)
                 {
-                    lpares[conti] = lNumerosEnteros[j];
+                    limpares[conti] = lNumerosEnteros[j];
                     conti++;
                 }
             }
 
             for (int k = 0; k < conti; k++)
             {
-                MessageBox.Show("Lista de impares: " + lpares[k].ToString(), "Impares", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lista de impares: " + limpares[k].ToString(), "Impares", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

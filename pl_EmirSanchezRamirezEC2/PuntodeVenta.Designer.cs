@@ -36,12 +36,12 @@ namespace pl_EmirSanchezRamirezEC2
             this.tsmiMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.segundaParteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tsslEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.segundaParteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.terceraParteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tsslEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -109,12 +109,31 @@ namespace pl_EmirSanchezRamirezEC2
             this.tsmiClientes.Text = "Clientes";
             this.tsmiClientes.Click += new System.EventHandler(this.tsmiClientes_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem1.Text = "|";
+            // 
             // segundaParteToolStripMenuItem
             // 
             this.segundaParteToolStripMenuItem.Name = "segundaParteToolStripMenuItem";
             this.segundaParteToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.segundaParteToolStripMenuItem.Text = "SegundaParte";
             this.segundaParteToolStripMenuItem.Click += new System.EventHandler(this.segundaParteToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem2.Text = "|";
+            // 
+            // terceraParteToolStripMenuItem
+            // 
+            this.terceraParteToolStripMenuItem.Name = "terceraParteToolStripMenuItem";
+            this.terceraParteToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.terceraParteToolStripMenuItem.Text = "TerceraParte";
+            this.terceraParteToolStripMenuItem.Click += new System.EventHandler(this.terceraParteToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -130,24 +149,6 @@ namespace pl_EmirSanchezRamirezEC2
             // 
             this.tsslEstado.Name = "tsslEstado";
             this.tsslEstado.Size = new System.Drawing.Size(0, 17);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem1.Text = "|";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem2.Text = "|";
-            // 
-            // terceraParteToolStripMenuItem
-            // 
-            this.terceraParteToolStripMenuItem.Name = "terceraParteToolStripMenuItem";
-            this.terceraParteToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
-            this.terceraParteToolStripMenuItem.Text = "TerceraParte";
             // 
             // PuntodeVenta
             // 

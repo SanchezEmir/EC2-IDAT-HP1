@@ -66,6 +66,12 @@
     <Compile Include="SegundaParte.Designer.cs">
       <DependentUpon>SegundaParte.cs</DependentUpon>
     </Compile>
+    <Compile Include="terceraParte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="terceraParte.Designer.cs">
+      <DependentUpon>terceraParte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Modal.resx">
       <DependentUpon>Modal.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="SegundaParte.resx">
       <DependentUpon>SegundaParte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terceraParte.resx">
+      <DependentUpon>terceraParte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
