@@ -50,6 +50,7 @@ namespace pl_EmirSanchezRamirezEC2
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lsbNumeros
             // 
@@ -67,6 +68,7 @@ namespace pl_EmirSanchezRamirezEC2
             this.btnOrdenar.TabIndex = 3;
             this.btnOrdenar.Text = "ORDENAR";
             this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
             // terceraParte
             // 
@@ -79,6 +81,7 @@ namespace pl_EmirSanchezRamirezEC2
             this.Controls.Add(this.txtNumeros);
             this.Name = "terceraParte";
             this.Text = "terceraParte";
+            this.Load += new System.EventHandler(this.terceraParte_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
