@@ -13,7 +13,6 @@ namespace pl_EmirSanchezRamirezEC2
     public partial class terceraParte : Form
     {
 
-        private int nEnteros;
         private int contador = 0;
         private int[] lNumerosEnteros = new int[10];
 
@@ -29,21 +28,32 @@ namespace pl_EmirSanchezRamirezEC2
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            nEnteros = Convert.ToInt32(txtNumeros.Text);
+            
+            if (int.TryParse(txtNumeros.Text, out int valor))
+            {
+                contador++;
+            }
+            else
+            {
+                MessageBox.Show("Ingresa solo numeros enteros", "Alerta", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                txtNumeros.SelectAll();
+                txtNumeros.Focus();
+                return;
+            }
 
-            contador++;
 
             if (contador <= 10)
             {
                 //agregar a la lista
-                lsbNumeros.Items.Add(nEnteros.ToString());
+                lsbNumeros.Items.Add(txtNumeros.Text.ToString());
                 //agregamos al arrego
-                lNumerosEnteros[contador - 1] = nEnteros;
+                lNumerosEnteros[contador - 1] = Convert.ToInt32(txtNumeros.Text.ToString());
             }
             else
             {
                 MessageBox.Show("Solo se admite 10 numeros enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            txtNumeros.SelectAll();
             txtNumeros.Focus();
         }
 

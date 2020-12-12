@@ -15,8 +15,7 @@ namespace pl_EmirSanchezRamirezEC2
         private int[] lNumerosEnteros = new int[10];
         //contador
         private int contador = 0;
-        //variable global
-        private int nEnteros;
+
 
         public SegundaParte()
         {
@@ -36,28 +35,41 @@ namespace pl_EmirSanchezRamirezEC2
         private void txtAgregar_Click(object sender, EventArgs e)
         {
 
-            nEnteros=  Convert.ToInt32(txtNumeroEntero.Text);
+            int valor = 0;
+            
 
-            contador++;
-
-            if (contador <= 10)
+            if (int.TryParse(txtNumeroEntero.Text, out valor))
             {
-                //agregar a la lista
-                lsbNumerosEnteros.Items.Add(nEnteros.ToString());
-                //agregamos al arrego
-                lNumerosEnteros[contador - 1] = nEnteros;
+                contador++;
             }
             else
             {
-                MessageBox.Show("Solo se admite 10 numeros enteros","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ingresa solo numeros enteros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtNumeroEntero.SelectAll();
+                txtNumeroEntero.Focus();
+                return;
+                
             }
+                
+            if (contador <= 10)
+            {
+                    //agregar a la lista
+                    lsbNumerosEnteros.Items.Add(txtNumeroEntero.Text.ToString());
+                    //agregamos al arrego
+                    lNumerosEnteros[contador - 1] = Convert.ToInt32( txtNumeroEntero.Text.ToString());
+            }
+            else
+            {
+                    MessageBox.Show("Solo se admite 10 numeros enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            txtNumeroEntero.SelectAll();
             txtNumeroEntero.Focus();
-            
         }
 
         private void btnPares_Click(object sender, EventArgs e)
         {
-            nEnteros = Convert.ToInt32(txtNumeroEntero.Text);
+            
             int contp = 0;
 
             for (int i = 0; i < 10; i++)
@@ -71,6 +83,7 @@ namespace pl_EmirSanchezRamirezEC2
 
             int[] lpares = new int[contp];
             contp = 0;
+
             for (int j = 0; j < 10; j++)
             {
                 if (lNumerosEnteros[j] % 2 == 0)
@@ -80,17 +93,20 @@ namespace pl_EmirSanchezRamirezEC2
                 }
             }
 
+            string juntaPares = string.Empty;
+
             for (int k = 0; k < contp; k++)
             {
-                MessageBox.Show("Lista de pares: "+ lpares[k].ToString(), "Pares",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                juntaPares = k < 1 ? lpares[k].ToString() : juntaPares + ", " + lpares[k].ToString();
             }
-            
+
+            MessageBox.Show("Lista de pares: " + juntaPares, "Pares", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
         private void btnImpares_Click(object sender, EventArgs e)
         {
-            nEnteros = Convert.ToInt32(txtNumeroEntero.Text);
+            
             int conti = 0;
 
             for (int i = 0; i < 10; i++)
@@ -104,6 +120,7 @@ namespace pl_EmirSanchezRamirezEC2
 
             int[] limpares = new int[conti];
             conti = 0;
+
             for (int j = 0; j < 10; j++)
             {
                 if (lNumerosEnteros[j] % 2 != 0)
@@ -113,10 +130,21 @@ namespace pl_EmirSanchezRamirezEC2
                 }
             }
 
+            string juntaImpares = string.Empty;
+
             for (int k = 0; k < conti; k++)
             {
-                MessageBox.Show("Lista de impares: " + limpares[k].ToString(), "Impares", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (k < 1)
+                {
+                    juntaImpares = limpares[k].ToString();
+                }
+                else
+                {
+                    juntaImpares += ", " + limpares[k].ToString();
+                }
             }
+
+            MessageBox.Show("Lista de impares: " + juntaImpares, "Impares", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
